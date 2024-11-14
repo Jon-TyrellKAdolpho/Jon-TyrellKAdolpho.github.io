@@ -1,0 +1,38 @@
+article {
+  padding: 1rem;
+  color: #2b3d56; /* Dark soft blue for text */
+  background-color: #b0cfe1; /* Light soft blue background */
+}
+
+h2 {
+  margin: 0;
+  color: #2b3d56; /* Dark soft blue for headings */
+}
+
+time {
+  color: #4b7291; /* Medium soft blue */
+}
+
+.actions {
+  text-align: right;
+  margin: 0;
+}
+
+.actions button {
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #3a5f7d; /* Primary soft blue */
+  color: #ffffff; /* White for text */
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #2b4b68; /* Darker soft blue for hover/active state */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
