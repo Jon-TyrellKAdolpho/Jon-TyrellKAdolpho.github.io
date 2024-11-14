@@ -1,4 +1,4 @@
-export interface User {
+export interface Season {
   id: string;
   name: string;
 }

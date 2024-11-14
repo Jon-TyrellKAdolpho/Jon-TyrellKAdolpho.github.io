@@ -1,6 +1,6 @@
 export interface Task {
   id: string;
-  userId: string;
+  seasonId: string;
   title: string;
   summary: string;
   startDate: string;

@@ -12,7 +12,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './new-task.component.css',
 })
 export class NewTaskComponent {
-  @Input({ required: true }) userId!: string;
+  @Input({ required: true }) seasonId!: string;
   @Output() close = new EventEmitter<void>();
   enteredTitle = '';
   enteredSummary = '';
@@ -26,6 +26,15 @@ export class NewTaskComponent {
   }
 
   onSubmit() {
+    const currentDate = new Date();
+    if (this.enteredTitle == '' || this.enteredSummary == ''){
+      this.errorMessage = 'Event must have a title and summary.'
+      return;
+    }
+    if (new Date(this.enteredStartDate) <= currentDate) {
+      this.errorMessage = 'Start date must be in the future.';
+      return;
+    }
     if (new Date(this.enteredEndDate) <= new Date(this.enteredStartDate)) {
       this.errorMessage = 'End date must be after the start date.';
       return;
@@ -41,7 +50,7 @@ export class NewTaskComponent {
         startDate: this.enteredStartDate,
         endDate: this.enteredEndDate,
       },
-      this.userId
+      this.seasonId
     );
     this.close.emit();
   }

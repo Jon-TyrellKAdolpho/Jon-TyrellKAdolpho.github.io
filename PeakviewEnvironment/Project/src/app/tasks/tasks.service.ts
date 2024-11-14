@@ -7,27 +7,27 @@ export class TasksService {
   private tasks = [
     {
       id: 't1',
-      userId: 'u1',
-      title: 'Master Angular',
+      seasonId: 's1',
+      title: 'Example Event',
       summary:
-        'Learn all the basic and advanced features of Angular & how to apply them.',
+        'Here is the example event for people to see.',
       startDate: '2025-11-15',
       endDate: '2025-12-31',
     },
     {
       id: 't2',
-      userId: 'u3',
-      title: 'Build first prototype',
-      summary: 'Build a first prototype of the online shop website',
+      seasonId: 's3',
+      title: 'Example Event',
+      summary: 'Here is the example event for people to see.',
       startDate: '2024-04-26',
       endDate: '2024-05-31',
     },
     {
       id: 't3',
-      userId: 'u3',
-      title: 'Prepare issue template',
+      seasonId: 's3',
+      title: 'Example Event',
       summary:
-        'Prepare and describe an issue template which will help with project management',
+        'Here is the example event for people to see.',
       startDate: '2025-04-12',
       endDate: '2024-06-15',
     },
@@ -41,14 +41,14 @@ export class TasksService {
     }
   }
 
-  getUserTasks(userId: string) {
-    return this.tasks.filter((task) => task.userId === userId);
+  getSeasonTasks(seasonId: string) {
+    return this.tasks.filter((task) => task.seasonId === seasonId);
   }
 
-  addTask(taskData: NewTaskData, userId: string) {
+  addTask(taskData: NewTaskData, seasonId: string) {
     this.tasks.unshift({
       id: new Date().getTime().toString(),
-      userId: userId,
+      seasonId: seasonId,
       title: taskData.title,
       summary: taskData.summary,
       startDate: taskData.startDate,

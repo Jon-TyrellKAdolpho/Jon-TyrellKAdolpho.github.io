@@ -7,7 +7,7 @@ main {
   gap: 2rem;
 }
 
-#users {
+#seasons {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ main {
     grid-template-columns: 1fr 3fr;
   }
 
-  #users {
+  #seasons {
     flex-direction: column;
   }
 

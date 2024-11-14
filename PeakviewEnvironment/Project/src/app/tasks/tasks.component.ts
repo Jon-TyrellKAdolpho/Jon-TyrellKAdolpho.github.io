@@ -12,14 +12,14 @@ import { TasksService } from './tasks.service';
   imports: [TaskComponent, NewTaskComponent],
 })
 export class TasksComponent {
-  @Input({ required: true }) userId!: string;
+  @Input({ required: true }) seasonId!: string;
   @Input({ required: true }) name!: string;
   isAddingTask = false;
 
   constructor(private tasksService: TasksService) {}
 
-  get selectedUserTasks() {
-    return this.tasksService.getUserTasks(this.userId);
+  get selectedSeasonTasks() {
+    return this.tasksService.getSeasonTasks(this.seasonId);
   }
 
   onStartAddTask() {

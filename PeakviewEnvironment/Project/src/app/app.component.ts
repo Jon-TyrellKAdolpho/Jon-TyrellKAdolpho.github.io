@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HeaderComponent } from './header/header.component';
 import { SeasonComponent } from './season/season.component';
-import { DUMMY_USERS } from './seasons';
+import { SEASONS } from './seasons';
 import { TasksComponent } from "./tasks/tasks.component";
 
 @Component({
@@ -13,14 +13,14 @@ import { TasksComponent } from "./tasks/tasks.component";
     imports: [HeaderComponent, SeasonComponent, TasksComponent]
 })
 export class AppComponent {
-  users = DUMMY_USERS;
-  selectedUserId?: string;
+  seasons = SEASONS;
+  selectedSeasonId?: string;
 
-  get selectedUser() {
-    return this.users.find((user) => user.id === this.selectedUserId);
+  get selectedSeason() {
+    return this.seasons.find((season) => season.id === this.selectedSeasonId);
   }
 
-  onSelectUser(id: string) {
-    this.selectedUserId = id;
+  onSelectSeason(id: string) {
+    this.selectedSeasonId = id;
   }
 }

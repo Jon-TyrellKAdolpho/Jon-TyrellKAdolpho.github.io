@@ -1,4 +1,4 @@
-export const DUMMY_USERS = [
+export const SEASONS = [
   {
     id: 's1',
     name: 'Spring Events',
